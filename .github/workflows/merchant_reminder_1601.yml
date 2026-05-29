@@ -2,9 +2,6 @@ name: 远行提醒第三轮
 
 # 定义触发器：每天在 16:01 触发
 on:
-  schedule:
-    # 使用 cron 语法定义精确的触发时间，格式：分 时 * * *
-    - cron: '1 8 * * *'
   workflow_dispatch: # 允许手动触发
 
 jobs:
