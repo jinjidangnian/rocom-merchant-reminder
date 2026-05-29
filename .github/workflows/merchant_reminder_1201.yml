@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # 允许手动触发
 
 jobs:
-  run-morning-task:
+  run-noon-task:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,5 +29,5 @@ jobs:
         pip install requests
 
     # 4. 运行 12:00 脚本
-    - name: 运行 1201.py (第一轮)
+    - name: 运行 1201.py (第二轮)
       run: python 1201.py
