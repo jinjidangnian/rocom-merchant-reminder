@@ -11,6 +11,11 @@ jobs:
   run-afternoon-task:
     runs-on: ubuntu-latest
 
+    # --- 请添加下面这 3 行配置 ---
+    env:
+      WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
+    # --- 添加结束 ---
+
     steps:
     # 步骤1：把代码下载到虚拟机中（升级到了 v5）
     - uses: actions/checkout@v5
