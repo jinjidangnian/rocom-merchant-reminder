@@ -1,0 +1,33 @@
+name: 远行提醒第四轮
+
+# 定义触发器：每天在 20:01 触发
+on:
+  schedule:
+    # 使用 cron 语法定义精确的触发时间，格式：分 时 * * *
+    - cron: '1 12 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  run-evening-task:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 检出代码
+    - name: 检出代码
+      uses: actions/checkout@v4
+
+    # 2. 设置 Python 环境
+    - name: 设置 Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    # 3. 安装依赖 (你的代码用到了 requests)
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    # 4. 运行 20:00 脚本
+    - name: 运行 2001.py (第四轮)
+      run: python 2001.py
