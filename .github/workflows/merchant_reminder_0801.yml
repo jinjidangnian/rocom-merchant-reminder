@@ -4,7 +4,7 @@ name: 远行提醒第一轮
 on:
   schedule:
     # 使用 cron 语法定义精确的触发时间，格式：分 时 * * *
-    - cron: '7 11 * * *'
+    - cron: '1 0  * * *'
   workflow_dispatch: # 允许手动触发
 
 jobs:
