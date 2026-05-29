@@ -1,4 +1,4 @@
-name: 远行提醒第一轮
+name: 远行提醒第三轮
 
 # 定义触发器：每天在 16:01 触发
 on:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # 允许手动触发
 
 jobs:
-  run-morning-task:
+  run-afternoon-task:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,5 +29,5 @@ jobs:
         pip install requests
 
     # 4. 运行 16:00 脚本
-    - name: 运行 1601.py (第一轮)
+    - name: 运行 1601.py (第三轮)
       run: python 1601.py
