@@ -13,9 +13,7 @@ for prop in props:
     if int(prop_start_ts / 14400000) % 6 == 0:
         line = f"{name}\n"
         result_0801_text += line
-        print(result_0801_text)
-print(1)
-print(result_0801_text)
+# print(result_0801_text)
 
 def send_to_wechat(content):
     # 从环境变量中读取 Webhook 地址（我们在 GitHub Secrets 里配置过）
