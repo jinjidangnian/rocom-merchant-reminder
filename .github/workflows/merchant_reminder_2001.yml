@@ -31,3 +31,5 @@ jobs:
     # 4. 运行 20:00 脚本
     - name: 运行 2001.py (第四轮)
       run: python 2001.py
+      env:  # 👇 这里非常关键，把 GitHub 的机密映射给 Python 进程的环境变量
+          ROCOM_API_KEY: ${{ secrets.ROCOM_API_KEY }}
