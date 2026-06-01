@@ -6,7 +6,7 @@ def get_all_props():
     # 接口地址、API 密钥和请求头
     url = "https://wegame.shallow.ink/api/v1/games/rocom/merchant/info"
     # API 密钥通过 Secrets 读取
-    ROCOM_API_KEY = os.getenv("ROCOM_API_KEY", "sk-0c1476b201301170e6360453becb27f5")  
+    ROCOM_API_KEY = os.getenv("ROCOM_API_KEY")  
     headers = {"X-API-Key": ROCOM_API_KEY}  # API 密钥放入 X-API-Key 字段中
     try:
         # 发送 GET 请求，获取接口数据，timeout=10，在状态码不是200时主动报错
