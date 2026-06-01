@@ -31,4 +31,6 @@ jobs:
     # 4. 运行 08:00 脚本
     - name: 运行 0801.py (第一轮)
       run: python 0801.py
+      env:  # 👇 这里非常关键，把 GitHub 的机密映射给 Python 进程的环境变量
+          ROCOM_API_KEY: ${{ secrets.ROCOM_API_KEY }}
 
